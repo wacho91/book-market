@@ -1,3 +1,4 @@
+import { FaCaretDown } from "react-icons/fa";
 import Logo from "../../assets/website/logo.png"
 
 const Menu = [
@@ -15,7 +16,7 @@ const Menu = [
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="shadow-lg">
         <div className="container py-3 sm:py-0">
             <div className="flex justify-between items-center">
                 <div>
@@ -25,14 +26,25 @@ const Navbar = () => {
                     </a>
                 </div>
                 <div>
-                    <ul>
+                    <ul className="gap-4 items-center hidden sm:flex">
                         {
                             Menu.map((menu) =>  (
                                 <li key={menu.id}>
-                                    <a href={menu.link} className="text-lg sm:text-xl font-bold hover:text-blue">{menu.name}</a>
+                                    <a href={menu.link} className="inline-block py-4 px-4 hover:text-primary duration-300">{menu.name}</a>
                                 </li>
                             ))
                         }
+                        {/*Dropdown Section*/}
+                        <li className="group relative cursor-pointer">
+                            <a href="/#"
+                                className="flex h-[72px] items-center gap-[2px]"
+                            >
+                                Quick Links
+                                <span>
+                                    <FaCaretDown  className="transition duration-300 group-hover:rotate-180"/>
+                                </span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
