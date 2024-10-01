@@ -1,5 +1,6 @@
 import { FaCaretDown } from "react-icons/fa";
 import Logo from "../../assets/website/logo.png"
+import { FaCartShopping } from "react-icons/fa6";
 
 const Menu = [
     {
@@ -14,6 +15,21 @@ const Menu = [
     },
 ];
 
+const DropdownLinks = [
+    {
+      name: "Trending Books",
+      link: "/#",
+    },
+    {
+      name: "Best Selling",
+      link: "/#",
+    },
+    {
+      name: "Authors",
+      link: "/#",
+    },
+];
+
 const Navbar = () => {
   return (
     <div className="shadow-lg">
@@ -25,7 +41,7 @@ const Navbar = () => {
                         Books
                     </a>
                 </div>
-                <div>
+                <div className="flex items-center justify-between gap-4">
                     <ul className="gap-4 items-center hidden sm:flex">
                         {
                             Menu.map((menu) =>  (
@@ -44,8 +60,34 @@ const Navbar = () => {
                                     <FaCaretDown  className="transition duration-300 group-hover:rotate-180"/>
                                 </span>
                             </a>
+                            {/*Dropdown Link Section*/}
+                            <div className="absolute -left-9 z-[10] hidden group-hover:block text-black bg-white p-2 shadow-md w-[150px]">
+                                <ul>
+                                    {
+                                        DropdownLinks.map((data) => (
+                                            <li key={data.link}>
+                                                <a 
+                                                    href={data.link}
+                                                    className="inline-block w-full p-2 rounded-md hover:bg-primary/20"
+                                                >
+                                                    {data.name}
+                                                </a>
+                                            </li>
+                                        ))
+                                    }
+                                </ul>
+                            </div>
                         </li>
                     </ul>
+                    <button 
+                        className="bg-gradient-to-r from-primary to-secondary 
+                        text-white px-4 py-2 rounded-full flex items-center gap-3 hover:scale-105 duration-300"
+                    >
+                        Order
+                        <FaCartShopping 
+                            className="text-xl text-white drop-shadow-sm cursor-pointer"
+                        />
+                    </button>
                 </div>
             </div>
         </div>
