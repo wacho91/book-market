@@ -1,6 +1,7 @@
 import { FaCaretDown } from "react-icons/fa";
 import Logo from "../../assets/website/logo.png"
 import { FaCartShopping } from "react-icons/fa6";
+import DarkMode from "./DarkMode";
 
 const Menu = [
     {
@@ -42,6 +43,9 @@ const Navbar = () => {
                     </a>
                 </div>
                 <div className="flex items-center justify-between gap-4">
+                    <div>
+                        <DarkMode />
+                    </div>
                     <ul className="gap-4 items-center hidden sm:flex">
                         {
                             Menu.map((menu) =>  (
