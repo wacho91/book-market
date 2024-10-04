@@ -33,7 +33,7 @@ const DropdownLinks = [
 
 const Navbar = () => {
   return (
-    <div className="shadow-lg">
+    <div className="shadow-lg bg-white dark:bg-gray-900 dark:text-white">
         <div className="container py-3 sm:py-0">
             <div className="flex justify-between items-center">
                 <div>
