@@ -5,6 +5,30 @@ import Book2 from "../../assets/book/book2.jpg";
 import Book3 from "../../assets/book/book3.jpg";
 import vector from "../../assets/website/blue-pattern.png"
 
+const ImageList = [
+    {
+      id: 1,
+      img: Book1,
+      title: "His Life will forever be Changed",
+      description:
+        "lorem His Life will forever be Changed dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      id: 2,
+      img: Book2,
+      title: "Who's there",
+      description:
+        "Who's there lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+    {
+      id: 3,
+      img: Book3,
+      title: "Lost Boy",
+      description:
+        "Lost Boy, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    },
+];
+
 const Hero = () => {
 
     const [imageId, setImageId] = useState(Book1);
@@ -49,13 +73,33 @@ const Hero = () => {
                     </div>
                 </div>
                 {/*Image Section*/}
-                <div className="min-h-[450px] flex justify-center items-center relative order-1 sm:order-2">
+                <div className="min-h-[450px] sm:min-h-[450px] flex justify-center items-center relative order-1 sm:order-2">
+                    {/*Main image*/}
                     <div className="h-[300px] sm:h-[450px] overflow-hidden flex justify-center items-center">
                         <img 
                             src={imageId} 
                             alt="" 
-                            className="w-[300px] sm:h-[450px] sm:w-[450px] sm:scale-125 object-contain mx-auto"
+                            className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-125 object-contain mx-auto"
                         />
+                    </div>
+                    {/*Other image list*/}
+                    <div className="flex lg:flex-col lg:top-1/2 lg:-translate-y-1/2 lg:py-2 justify-center gap-4 absolute -bottom-[40px] lg:-right-[40px] bg-white rounded-full">
+                        {
+                            ImageList.map((item) => (
+                                <img
+                                    key={item.id}
+                                    src={item.img}
+                                    className="max-w-[100px] h-[100px] object-contain inline-block hover:scale-110 duration-200"
+                                    onClick={() => {
+                                        setImageId(item.id === 1 ?
+                                        Book1 : item.id === 2 ?
+                                        Book2 : Book3);
+                                        setTitle(item.title);
+                                        setDescription(item.description)
+                                    }}
+                                />
+                            ))
+                        }
                     </div>
                 </div>
             </div>
