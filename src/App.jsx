@@ -1,3 +1,4 @@
+import AppStoreBanner from "./components/AppStoreBanner/AppStoreBanner"
 import Banner from "./components/Banner/Banner"
 import BestBook from "./components/BestBook/BestBook"
 import Hero from "./components/Hero/Hero"
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <BestBook />
       <Banner />
+      <AppStoreBanner />
     </div>
   )
 }
