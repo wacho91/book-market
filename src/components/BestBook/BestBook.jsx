@@ -1,4 +1,5 @@
 
+import { FaStar } from "react-icons/fa";
 import Img1 from "../../assets/book/book1.jpg"
 import Img2 from "../../assets/book/book2.jpg"
 import Img3 from "../../assets/book/book3.jpg"
@@ -47,14 +48,26 @@ const BestBook = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:gap-5 place-items-center">
                 {
                     BooksData.map((book) => (
-                        <div key={book.id} className="">
+                        <div key={book.id} className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-primary 
+                        dark:hover:bg-primary hover:text-white relative shadow-xl duration-high group max-w-[300px]"
+                        >
                             <div className="h-[100px]">
-                                <img src={book.img} alt="" />
+                                <img 
+                                    src={book.img} 
+                                    alt="img" 
+                                    className="max-w-[100px] block mx-auto transform -translate-y-14 group-hover:scale-105 duration-300 shadow-md"
+                                />
                             </div>
-                            <div>
-                                <div>
-                                    
+                            <div className="p-4 text-center">
+                                <div className="w-full flex items-center justify-center">
+                                    <FaStar className="text-yellow-500" />
+                                    <FaStar className="text-yellow-500" />
+                                    <FaStar className="text-yellow-500" />
+                                    <FaStar className="text-yellow-500" />
                                 </div>
+                                <h1 className="text-xl font-bold">{book.title}</h1>
+                                <p className="text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-2">{book.description}</p>
+                                <button>Order Now</button>
                             </div>
                         </div>
                     ))

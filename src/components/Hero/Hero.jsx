@@ -83,7 +83,7 @@ const Hero = () => {
                         />
                     </div>
                     {/*Other image list*/}
-                    <div className="flex lg:flex-col lg:top-1/2 lg:-translate-y-1/2 lg:py-2 justify-center gap-4 absolute -bottom-[40px] lg:-right-[40px] bg-white rounded-full">
+                    <div className="flex lg:flex-col lg:top-1/2 lg:-translate-y-1/2 lg:py-2 justify-center gap-4 absolute -bottom-[40px] lg:-right-[50px] bg-white rounded-full">
                         {
                             ImageList.map((data) => (
                                 <img

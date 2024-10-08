@@ -6,10 +6,10 @@ import Navbar from "./components/Navbar/Navbar"
 function App() {
 
   return (
-    <div>
-        <Navbar />
-        <Hero />
-        <BestBook />
+    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
+      <Navbar />
+      <Hero />
+      <BestBook />
     </div>
   )
 }
