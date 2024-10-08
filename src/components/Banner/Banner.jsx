@@ -3,6 +3,7 @@ import { GrSecure } from "react-icons/gr";
 import LibraryImg from "../../assets/website/library.jpg";
 import { IoFastFood } from "react-icons/io5";
 import { GiFoodTruck } from "react-icons/gi";
+import { MdPayment } from "react-icons/md";
 
 const Banner = () => {
   return (
@@ -38,7 +39,7 @@ const Banner = () => {
                         </div>
 
                         <div className="flex items-center gap-4">
-                            <GiFoodTruck  className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-green-100 dark:bg-green-400"/>
+                            <MdPayment  className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-green-100 dark:bg-green-400"/>
                             <p>Easy Payment Method</p>
                         </div>
 
