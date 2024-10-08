@@ -1,5 +1,8 @@
 
+import { GrSecure } from "react-icons/gr";
 import LibraryImg from "../../assets/website/library.jpg";
+import { IoFastFood } from "react-icons/io5";
+import { GiFoodTruck } from "react-icons/gi";
 
 const Banner = () => {
   return (
@@ -23,7 +26,27 @@ const Banner = () => {
                         quod voluptates! Ea fugit dignissimos 
                         facere nobis dolor. Nulla.
                     </p>
-                    div
+                    <div className="flex flex-col gap-4">
+                        <div className="flex items-center gap-4">
+                            <GrSecure  className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-violet-100 dark:bg-violet-400"/>
+                            <p>Quality Books</p>
+                        </div>
+
+                        <div className="flex items-center gap-4">
+                            <IoFastFood  className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-orange-100 dark:bg-orange-400"/>
+                            <p>Fast Delivery</p>
+                        </div>
+
+                        <div className="flex items-center gap-4">
+                            <GiFoodTruck  className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-green-100 dark:bg-green-400"/>
+                            <p>Easy Payment Method</p>
+                        </div>
+
+                        <div className="flex items-center gap-4">
+                            <GiFoodTruck  className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-yellow-100 dark:bg-yellow-400"/>
+                            <p>Get Offers On Books</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
