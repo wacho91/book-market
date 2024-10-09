@@ -47,7 +47,7 @@ const TopBook = () => {
     <div className="py-10">
         <div className="container">
             {/*Header*/}
-            <div className="text-center mb-20 max-w-[400px] mx-auto">
+            <div data-aos="slide-up" className="text-center mb-20 max-w-[400px] mx-auto">
                 <p className="text-sm bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
                     Best Books For You
                 </p>
@@ -59,7 +59,7 @@ const TopBook = () => {
                 </p>
             </div>
             {/*Card*/}
-            <div>
+            <div data-aos="slide-up">
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
                     {
                         booksData.map((data) => (
@@ -82,7 +82,8 @@ const TopBook = () => {
                     }
                 </div>
                 <div className="flex justify-center">
-                    <button 
+                    <button
+                        data-aos="zoom-in" 
                         className="text-center mt-10 cursor-pointer bg-primary text-white py-2 px-5 rounded-full"
                     >
                         View All Books

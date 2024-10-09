@@ -48,7 +48,7 @@ const BestBook = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:gap-5 place-items-center">
                 {
                     BooksData.map((book) => (
-                        <div key={book.id} className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-primary 
+                        <div key={book.id} data-aos="zoom-in" className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-primary 
                         dark:hover:bg-primary hover:text-white relative shadow-xl duration-high group max-w-[300px]"
                         >
                             <div className="h-[100px]">
