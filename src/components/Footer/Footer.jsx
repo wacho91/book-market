@@ -23,7 +23,7 @@ const FooterLinks = [
 
 const Footer = () => {
   return (
-    <div>
+    <div className="bg-gray-100 dark:bg-gray-950">
         <div className="container">
             <div className="grid md:grid-cols-3 py-5">
                 {/*company details*/}
@@ -63,10 +63,10 @@ const Footer = () => {
                     <div>
                         <div className="py-8 px-4">
                             <h1 className="text-xl font-bold sm:text-left text-justify mb-3">Important Links</h1>
-                            <ul>
+                            <ul className="flex flex-col gap-3">
                                 {
                                     FooterLinks.map((data) => (
-                                        <li key={data.link} className="cursor-pointer hover:translate-x-1 duration-300">
+                                        <li key={data.link} className="cursor-pointer hover:translate-x-1 duration-300 hover:text-primary space-x-1 text-gray-500">
                                             <span>&#11162;</span>
                                             <span>{data.title}</span>
                                         </li>
@@ -75,6 +75,44 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
+                    <div>
+                        <div className="py-8 px-4">
+                            <h1 className="text-xl font-bold sm:text-left text-justify mb-3">Links</h1>
+                            <ul className="flex flex-col gap-3">
+                                {
+                                    FooterLinks.map((data) => (
+                                        <li key={data.link} className="cursor-pointer hover:translate-x-1 duration-300 hover:text-primary space-x-1 text-gray-500">
+                                            <span>&#11162;</span>
+                                            <span>{data.title}</span>
+                                        </li>
+                                    ))
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div className="py-8 px-4">
+                            <h1 className="text-xl font-bold sm:text-left text-justify mb-3">Location</h1>
+                            <ul className="flex flex-col gap-3">
+                                {
+                                    FooterLinks.map((data) => (
+                                        <li key={data.link} className="cursor-pointer hover:translate-x-1 duration-300 hover:text-primary space-x-1 text-gray-500">
+                                            <span>&#11162;</span>
+                                            <span>{data.title}</span>
+                                        </li>
+                                    ))
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/*Footer Section*/}
+            <div>
+                <div className="border-t-2 border-gray-300/50">
+                    <p className="text-center py-10">
+                        CopyRight &copy; 2024. All rights reserved
+                    </p>
                 </div>
             </div>
         </div>
