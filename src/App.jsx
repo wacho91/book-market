@@ -3,6 +3,7 @@ import Banner from "./components/Banner/Banner"
 import BestBook from "./components/BestBook/BestBook"
 import Hero from "./components/Hero/Hero"
 import Navbar from "./components/Navbar/Navbar"
+import Testimonial from "./components/Testimonial/Testimonial"
 import TopBook from "./components/TopBook/TopBook"
 
 
@@ -16,6 +17,7 @@ function App() {
       <Banner />
       <AppStoreBanner />
       <TopBook />
+      <Testimonial />
     </div>
   )
 }
