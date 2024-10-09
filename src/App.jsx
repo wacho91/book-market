@@ -1,6 +1,7 @@
 import AppStoreBanner from "./components/AppStoreBanner/AppStoreBanner"
 import Banner from "./components/Banner/Banner"
 import BestBook from "./components/BestBook/BestBook"
+import Footer from "./components/Footer/Footer"
 import Hero from "./components/Hero/Hero"
 import Navbar from "./components/Navbar/Navbar"
 import Testimonial from "./components/Testimonial/Testimonial"
@@ -18,6 +19,7 @@ function App() {
       <AppStoreBanner />
       <TopBook />
       <Testimonial />
+      <Footer />
     </div>
   )
 }
