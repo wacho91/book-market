@@ -15,7 +15,7 @@ import Modal from "./components/Modal/Modal"
 
 function App() {
 
-  const [orderPopup, setOrderPopup] = useState(true);
+  const [orderPopup, setOrderPopup] = useState(false);
 
   const handleOrderPopup = () => {
     setOrderPopup(!orderPopup)
