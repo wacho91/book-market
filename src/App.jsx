@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import AppStoreBanner from "./components/AppStoreBanner/AppStoreBanner"
 import Banner from "./components/Banner/Banner"
 import BestBook from "./components/BestBook/BestBook"
@@ -10,9 +10,16 @@ import TopBook from "./components/TopBook/TopBook"
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Modal from "./components/Modal/Modal"
 
 
 function App() {
+
+  const [orderPopup, setOrderPopup] = useState(true);
+
+  const handleOrderPopup = () => {
+    setOrderPopup(!orderPopup)
+  }
 
   useEffect(() => {
     AOS.init({
@@ -25,15 +32,18 @@ function App() {
   }, []);
 
   return (
+
+    
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
-      <Navbar />
-      <Hero />
-      <BestBook />
+      <Navbar handleOrderPopup={handleOrderPopup}/>
+      <Hero handleOrderPopup={handleOrderPopup}/>
+      <BestBook handleOrderPopup={handleOrderPopup}/>
       <Banner />
       <AppStoreBanner />
       <TopBook />
       <Testimonial />
       <Footer />
+      <Modal handleOrderPopup={handleOrderPopup} orderPopup={orderPopup}/>
     </div>
   )
 }
